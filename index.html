@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Schedule Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Daily Schedule Builder</h2>
+    <hr class="divider">
+
+    <div class="step active" id="step0">
+        <label>What time do you usually <strong>wake up</strong>?</label>
+        <div class="time-preview" id="preview0">6:00 AM</div>
+        <input type="range" id="slider0" min="0" max="1439" value="360" oninput="updatePreview(0)"><br>
+        <button onclick="nextStep(0)">Next</button>
+    </div>
+
+    <div class="step" id="step1">
+        <label>What time do you eat <strong>breakfast</strong>?</label>
+        <div class="time-preview" id="preview1">8:00 AM</div>
+        <input type="range" id="slider1" min="0" max="1439" value="480" oninput="updatePreview(1)"><br>
+        <button onclick="nextStep(1)">Next</button>
+    </div>
+
+    <div class="step" id="step2">
+        <label>What time do you start <strong>studying or working</strong>?</label>
+        <div class="time-preview" id="preview2">9:00 AM</div>
+        <input type="range" id="slider2" min="0" max="1439" value="540" oninput="updatePreview(2)"><br>
+        <button onclick="nextStep(2)">Next</button>
+    </div>
+
+    <div class="step" id="step3">
+        <label>What time do you have <strong>lunch</strong>?</label>
+        <div class="time-preview" id="preview3">1:00 PM</div>
+        <input type="range" id="slider3" min="0" max="1439" value="780" oninput="updatePreview(3)"><br>
+        <button onclick="nextStep(3)">Next</button>
+    </div>
+
+    <div class="step" id="step4">
+        <label>What time is your <strong>free time / hobbies</strong>?</label>
+        <div class="time-preview" id="preview4">5:00 PM</div>
+        <input type="range" id="slider4" min="0" max="1439" value="1020" oninput="updatePreview(4)"><br>
+        <button onclick="nextStep(4)">Next</button>
+    </div>
+
+    <div class="step" id="step5">
+        <label>What time do you eat <strong>dinner</strong>?</label>
+        <div class="time-preview" id="preview5">8:00 PM</div>
+        <input type="range" id="slider5" min="0" max="1439" value="1200" oninput="updatePreview(5)"><br>
+        <button onclick="nextStep(5)">Next</button>
+    </div>
+
+    <div class="step" id="step6">
+        <label>What time do you go to <strong>sleep</strong>?</label>
+        <div class="time-preview" id="preview6">10:00 PM</div>
+        <input type="range" id="slider6" min="0" max="1439" value="1320" oninput="updatePreview(6)"><br>
+        <button onclick="generateSchedule()">Generate Schedule</button>
+    </div>
+
+    <div class="step" id="finalStep">
+        <h3>Your Daily Schedule</h3>
+        <div class="schedule-result" id="scheduleDisplay"></div>
+        <br>
+        <button onclick="restart()">Start Over</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
