@@ -1,0 +1,97 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin-bottom: 20px;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+label {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.time-preview {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2e86de;
+    margin-bottom: 15px;
+}
+
+input[type="range"] {
+    width: 80%;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.schedule-result {
+    text-align: left;
+    margin-top: 20px;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.schedule-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.time-tag {
+    font-weight: bold;
+    color: #2e86de;
+    margin-right: 10px;
+}
